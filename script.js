@@ -27,11 +27,11 @@ document.querySelector(".tebak").addEventListener("click", function () {
   //! KETIKA PEMAIN BENAR MENEBAK
   }else if (tebakan === secretNumber) {
     document.getElementById("pesan").textContent = `SELAMAT KAMU DAPAT BAMBU RUNCING`;
-    document.querySelector("body").style.backgroundColor = "rgba(255, 0, 0.75)";
+    document.querySelector("body").style.backgroundColor = "rgba(255, 0, 0.25)";
     document.getElementById("highscore").textContent = score
+    document.getElementById(".secretnumber").textContent = `Nilainya adalah ${secretNumber}` 
   }
   document.getElementById("score").textContent = score
-  console.log(`asep`)
 }
 
  
