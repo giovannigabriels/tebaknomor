@@ -14,7 +14,7 @@ document.querySelector(".tebak").addEventListener("click", function () {
     document.getElementById("pesan").textContent = `Tidak ada angka`;
 
     //! KETIKA TEBAKAN LEBIH BESAR
-  } else if (tebakan > secretNumber && play) {
+  } else if (tebakan > secretNumber && play && tebakan <= 25) {
     document.getElementById("pesan").textContent = `Kejauhan ai kamu`;
     score--;
     document.getElementById("score").textContent = score;
@@ -34,6 +34,13 @@ document.querySelector(".tebak").addEventListener("click", function () {
       ".secretnumber"
     ).textContent = `Nilainya adalah ${secretNumber}`;
     document.getElementById("score").textContent = score;
+  } else if (tebakan > 25) {
+    document.getElementById("pesan").textContent = `INGAT! MAKSIMAL 25 BUNG!`;
+    document.querySelector("body").style.backgroundColor = "rgba(255, 255, 5)";
+
+    document.querySelector(".secretnumber").textContent = secretNumber;
+
+    document.getElementById("highscore").textContent = score;
   }
 
   //! KETIKA SCORE MENJADI 0
