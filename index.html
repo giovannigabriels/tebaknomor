@@ -5,24 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Iso&family=Silkscreen&display=swap" rel="stylesheet">
     <title>Document</title>
   </head>
   <body>
     <div class="container">
       <h1>Tebak angka!</h1>
-    
+
       <p id="main"><em>Tebak angka dari 1 sampai 25</em></p>
-    
+      <div id="secretnumber">??</div>
       <form class="flex-form">
         <label for="num" class="form-el">Insert your number:</label>
-        <input type="number" name="num" id="num" class="bigger-box" min="1" max="25" placeholder="Insert your number" required />
-        <button type="submit" id="submit" class="btn bigger-box">Coba tebak!</button>
-        <button type="reset" id="reset" class="btn bigger-box">Tebak lagi</button>
-        <p id="show-num"></p>
-        <p id="hint"></p>
-        <p id="success"></p>
+        <input
+          type="number"
+          name="num"
+          id="num"
+          class="bigger-box"
+          placeholder="Insert your number"
+        />
+        <button type="button" id="submit" class="btn tebak">Coba tebak!</button>
+        <button type="button" id="reset" class="btn reset">Tebak lagi</button>
+        <div>
+          <p class="label-score">Score Kamu:<span id="score">10</span></p>
+          <p id="pesan">MULAI TEBAK...</p>
+          <p id="label-highscore">
+        </div>
+          Score Tertinggi Kamu: <span id="highscore">0</span>
+        </p>
       </form>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
