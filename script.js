@@ -1,6 +1,6 @@
 "use strict";
 
-let secretNumber = Math.trunc(Math.random() * 25);
+let secretNumber = Math.trunc(Math.random() * 25) + 1;
 let score = 10;
 let highScore = 0;
 
@@ -8,8 +8,6 @@ let play = true;
 
 document.querySelector(".tebak").addEventListener("click", function () {
   const tebakan = Number(document.querySelector(".bigger-box").value);
-  //   console.log(tebakan, typeof tebakan);
-  document.getElementById("highscore").textContent = highScore;
 
   //! TEBAKAN BELUM DI INPUT NO / TIDAK MEMILIKI INPUT NO
 
@@ -17,7 +15,7 @@ document.querySelector(".tebak").addEventListener("click", function () {
     document.getElementById("pesan").textContent = `Tidak ada angka`;
 
     //! KETIKA TEBAKAN LEBIH BESAR
-  } else if (tebakan > secretNumber && play && tebakan<= 25) {
+  } else if (tebakan > secretNumber && play && tebakan <= 25) {
     document.getElementById("pesan").textContent = `Kejauhan ai kamu`;
     score--;
     document.getElementById("score").textContent = score;
@@ -38,8 +36,10 @@ document.querySelector(".tebak").addEventListener("click", function () {
     ).textContent = `Nilainya adalah ${secretNumber}`;
 
     document.getElementById("score").textContent = score;
-
-    //! KETIKA PEMAIN INPUT LEBIH DARI 25
+    if (score > highScore) {
+      highScore = score;
+      document.getElementById("highscore").textContent = highScore;
+    }
   } else if (tebakan > 25) {
     document.getElementById("pesan").textContent = `INGAT! MAKSIMAL 25 BUNG!`;
     document.querySelector("body").style.backgroundColor = "rgba(255, 255, 5)";
@@ -47,12 +47,10 @@ document.querySelector(".tebak").addEventListener("click", function () {
     document.querySelector(".secretnumber").textContent = secretNumber;
 
     document.getElementById("highscore").textContent = score;
-
   }
 
   //! KETIKA SCORE MENJADI 0
   if (score === 0) {
-
     play = false;
 
     document.getElementById(
@@ -65,5 +63,14 @@ document.querySelector(".tebak").addEventListener("click", function () {
 
     document.getElementById("highscore").textContent = score;
   }
+});
 
+document.getElementById("reset").addEventListener("click", function () {
+  score = 10;
+  secretNumber = Math.trunc(Math.random() * 25) + 1;
+  document.getElementById("score").textContent = score;
+  document.getElementsByClassName("secretnumber").textContent = "??";
+  document.querySelector("body").style.background = "#f08080";
+  play = true;
+  document.getElementById("pesan").textContent = "MULAI TEBAK...";
 });
