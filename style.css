@@ -7,7 +7,7 @@
 body {
     background-size: cover;
     background-position: center;
-    background-image: url(https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2020/08/11/1153135700.jpg);
+    background-image: url(https://i.ytimg.com/vi/Dbd3ZYKcshA/maxresdefault.jpg);
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1.5rem;
@@ -19,7 +19,7 @@ body {
 }
 
 h1 {
-    color: white;
+    color: rgb(214, 16, 16);
     font-family: 'Press Start 2P', cursive;
     font-weight: lighter;
     font-size: 4.6rem;
@@ -63,7 +63,7 @@ label {
 
 .bigger-box {
     color: white;
-    background-color: #cf1020;
+    background-color: #030000;
     font-family: 'Silkscreen', cursive;
     font-size: 1rem;
     width: 17rem;
@@ -111,7 +111,7 @@ label {
 }
 
 .btn {
-    background-color: white;
+    background-color: rgb(225, 253, 6);
     cursor: pointer;
     font-weight: 700;
     color: #cf1020;
@@ -159,3 +159,5 @@ label {
         margin-top: 5rem;
     }
 }
+
+
