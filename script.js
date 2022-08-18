@@ -8,10 +8,10 @@ let highScore = 0;
 // const displayPesan = function (pesan) {
 //   document.querySelector("#pesan").textContent = pesan;
 // };
-
+console.log(secretNumber);
 document.querySelector(".tebak").addEventListener("click", function () {
   const tebakan = Number(document.querySelector(".bigger-box").value);
-  //   console.log(tebakan, typeof tebakan);
+  console.log(tebakan, typeof tebakan);
 
   if (!tebakan) {
     document.getElementById("pesan").textContent = `Tidak ada angka`;
@@ -22,5 +22,6 @@ document.querySelector(".tebak").addEventListener("click", function () {
       "pesan"
     ).textContent = `SELAMAT KAMU DAPAT BAMBU RUNCING`;
     document.querySelector("body").style.backgroundColor = "rgba(255, 0, 0.75)";
+    document.querySelector(".secretnumber").textContent = secretNumber;
   }
 });
