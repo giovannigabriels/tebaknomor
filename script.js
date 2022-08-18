@@ -31,6 +31,7 @@ document.querySelector(".tebak").addEventListener("click", function () {
     document.getElementById("highscore").textContent = score
   }
   document.getElementById("score").textContent = score
+  console.log(`asep`)
 }
 
  
