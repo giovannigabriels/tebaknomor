@@ -18,13 +18,14 @@ body {
 
 h1 {
     color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Rubik Iso', cursive;;
     font-weight: lighter;
-    font-size: 3.5rem;
+    font-size: 5rem;
     margin-bottom: 1.5rem;
 }
 
 #main, label {
+    font-family: 'Silkscreen', cursive;;
     font-size: 1.2rem;
 }
 
