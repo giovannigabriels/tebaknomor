@@ -6,5 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>Tebak angka!</h1>
+    
+      <p id="main"><em>Tebak angka dari 1 sampai 25</em></p>
+    
+      <form class="flex-form">
+        <label for="num" class="form-el">Insert your number:</label>
+        <input type="number" name="num" id="num" class="bigger-box" min="1" max="25" placeholder="Insert your number" required />
+        <button type="submit" id="submit" class="btn bigger-box">Coba tebak!</button>
+        <button type="reset" id="reset" class="btn bigger-box">Tebak lagi</button>
+        <p id="show-num"></p>
+        <p id="hint"></p>
+        <p id="success"></p>
+      </form>
+    </div>
+  </body>
 </html>
