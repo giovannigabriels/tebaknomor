@@ -32,17 +32,22 @@ document.querySelector(".tebak").addEventListener("click", function () {
     document.querySelector("body").style.backgroundColor = "rgba(255, 0, 0.25)";
     document.getElementById("highscore").textContent = score;
     document.getElementById(
-      ".secretnumber"
-    ).textContent = `Nilainya adalah ${secretNumber}`;
+
+      "secretnumber"
+    ).textContent = `Angka adalah ${secretNumber}`;
+
 
     document.getElementById("score").textContent = score;
     if (score > highScore) {
       highScore = score;
       document.getElementById("highscore").textContent = highScore;
+
+    } else {
+        document.getElementById("highscore").textContent = highScore;
     }
   } else if (tebakan > 25) {
     document.getElementById("pesan").textContent = `INGAT! MAKSIMAL 25 BUNG!`;
-    document.querySelector("body").style.backgroundColor = "rgba(255, 255, 5)";
+   
 
     document.querySelector(".secretnumber").textContent = secretNumber;
 
@@ -56,7 +61,8 @@ document.querySelector(".tebak").addEventListener("click", function () {
     document.getElementById(
       "pesan"
     ).textContent = `SAYANG SEKALI ANDA AKHIRNYA TEWAS!`;
-    document.querySelector("body").style.backgroundColor = "rgba(100, 1, 5)";
+
+
 
     document.getElementById("score").textContent = score;
     document.querySelector(".secretnumber").textContent = secretNumber;
@@ -69,8 +75,11 @@ document.getElementById("reset").addEventListener("click", function () {
   score = 10;
   secretNumber = Math.trunc(Math.random() * 25) + 1;
   document.getElementById("score").textContent = score;
-  document.getElementsByClassName("secretnumber").textContent = "??";
-  document.querySelector("body").style.background = "#f08080";
+
+  document.getElementById("secretnumber").textContent = "??";
+
   play = true;
   document.getElementById("pesan").textContent = "MULAI TEBAK...";
+  document.getElementById("num").value = "";
 });
+
