@@ -3,8 +3,16 @@
 let secretNumber = Math.trunc(Math.random() * 25) + 1;
 let score = 10;
 let highScore = 0;
-
+let user = document.getElementById("user").value;
+let loc = document.getElementById("loc").value;
+// let page1 = document.getElementsByClassName("page1");
+// let page2 = document.getElementsByClassName("page2");
 let play = true;
+
+document.getElementById("login").addEventListener("click", function () {
+  document.querySelector(".page1").style.display = "none";
+  document.querySelector(".page2").style.display = "block";
+});
 
 document.querySelector(".tebak").addEventListener("click", function () {
   const tebakan = Number(document.querySelector(".bigger-box").value);
@@ -32,22 +40,18 @@ document.querySelector(".tebak").addEventListener("click", function () {
     document.querySelector("body").style.backgroundColor = "rgba(255, 0, 0.25)";
     document.getElementById("highscore").textContent = score;
     document.getElementById(
-
       "secretnumber"
     ).textContent = `Angka adalah ${secretNumber}`;
-
 
     document.getElementById("score").textContent = score;
     if (score > highScore) {
       highScore = score;
       document.getElementById("highscore").textContent = highScore;
-
     } else {
-        document.getElementById("highscore").textContent = highScore;
+      document.getElementById("highscore").textContent = highScore;
     }
   } else if (tebakan > 25) {
     document.getElementById("pesan").textContent = `INGAT! MAKSIMAL 25 BUNG!`;
-   
 
     document.querySelector(".secretnumber").textContent = secretNumber;
 
@@ -61,8 +65,6 @@ document.querySelector(".tebak").addEventListener("click", function () {
     document.getElementById(
       "pesan"
     ).textContent = `SAYANG SEKALI ANDA AKHIRNYA TEWAS!`;
-
-
 
     document.getElementById("score").textContent = score;
     document.querySelector(".secretnumber").textContent = secretNumber;
@@ -82,4 +84,3 @@ document.getElementById("reset").addEventListener("click", function () {
   document.getElementById("pesan").textContent = "MULAI TEBAK...";
   document.getElementById("num").value = "";
 });
-
