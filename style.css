@@ -62,6 +62,9 @@ label {
 .editnama {
   display: none;
 }
+#loc {
+  display: none;
+}
 .flex-form {
   position: absolute;
   left: 0;
