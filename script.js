@@ -8,6 +8,8 @@ let loc = "";
 
 let play = true;
 let login = document.getElementById("login");
+let lagu = document.getElementById("backsound")
+lagu.volume = 0.05
 
 login.addEventListener("click", function () {
   user = document.getElementById("user").value;
