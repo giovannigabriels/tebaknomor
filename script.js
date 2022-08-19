@@ -108,4 +108,6 @@ document.querySelector("#submitedit").addEventListener("click", function () {
   document.getElementById("num").value = "";
   score = 10;
   document.getElementById("score").textContent = score;
+  secretNumber = Math.trunc(Math.random() * 25) + 1;
+  document.getElementById("secretnumber").textContent = "??";
 });
