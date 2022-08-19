@@ -106,4 +106,6 @@ document.querySelector("#submitedit").addEventListener("click", function () {
   document.querySelector("#highscore").textContent = highScore;
   document.getElementById("report").style.display = "none";
   document.getElementById("num").value = "";
+  score = 10;
+  document.getElementById("score").textContent = score;
 });
