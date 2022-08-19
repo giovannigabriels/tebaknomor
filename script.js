@@ -90,7 +90,12 @@ document.getElementById("reset").addEventListener("click", function () {
 });
 
 document.getElementById("claim").addEventListener("click", function () {
-  document.getElementById("report").innerText = `${user} ${highScore}`;
+  if (highScore === 10) {
+    document.getElementById("report").innerText = `HOKI BANGET LUU ${user}`;
+  } else {
+    document.getElementById("report").innerText = ` ${user} ${highScore}`;
+  }
+
   document.getElementById("report").style.display = "block";
 });
 
@@ -112,3 +117,4 @@ document.querySelector("#submitedit").addEventListener("click", function () {
   document.getElementById("secretnumber").textContent = "??";
   document.getElementById("pesan").textContent = "MULAI TEBAK...";
 });
+console.log(secretNumber);
