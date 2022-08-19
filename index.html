@@ -12,7 +12,7 @@
     <title>TEBAK ANGKA!</title>
   </head>
 
-  <!-- <audio id="lose">
+  <!-- <!-- <audio id="lose"> -->
     <source src="musik/kalah.mp3" type="mp3/mpeg">
   </audio>
   <audio id="again">
@@ -101,7 +101,17 @@
         </p>
       </form>
       
+      <button type="button" id="claim" class="btn tebak">CLAIM YOUR PRIZE</button>
+      <button type="button" id="edit" class="btn tebak">EDIT NAMA</button>
+      <div class="editnama">
+        <input id="edituser" type="text" placeholder="Nama pengguna">
+        <button type="button" id="submitedit" class="btn tebak">SUBMIT</button>
+      </div>
     </div>
+    <div class="prize">
+      <p id="report"></p>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

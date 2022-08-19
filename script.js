@@ -86,4 +86,24 @@ document.getElementById("reset").addEventListener("click", function () {
   play = true;
   document.getElementById("pesan").textContent = "MULAI TEBAK...";
   document.getElementById("num").value = "";
+  document.getElementById("report").innerText = "";
+});
+
+document.getElementById("claim").addEventListener("click", function () {
+  document.getElementById("report").innerText = `${user} ${highScore}`;
+  document.getElementById("report").style.display = "block";
+});
+
+document.querySelector("#edit").addEventListener("click", function () {
+  // console.log("<<<<user, loc>>>>");
+  document.querySelector(".editnama").style.display = "block";
+});
+
+document.querySelector("#submitedit").addEventListener("click", function () {
+  user = document.querySelector("#edituser").value;
+  document.querySelector(".editnama").style.display = "none";
+  highScore = 0;
+  document.querySelector("#highscore").textContent = highScore;
+  document.getElementById("report").style.display = "none";
+  document.getElementById("num").value = "";
 });

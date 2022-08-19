@@ -59,7 +59,9 @@ label {
   font-family: "Silkscreen", cursive;
   color: white;
 }
-
+.editnama {
+  display: none;
+}
 .flex-form {
   position: absolute;
   left: 0;
