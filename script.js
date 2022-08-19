@@ -1,9 +1,10 @@
 "use strict";
 
+let a = document.getElementById("backsound")
+a.volume = 0.1
 let secretNumber = Math.trunc(Math.random() * 25) + 1;
 let score = 10;
 let highScore = 0;
-
 let play = true;
 
 document.querySelector(".tebak").addEventListener("click", function () {
@@ -26,9 +27,14 @@ document.querySelector(".tebak").addEventListener("click", function () {
     document.getElementById("score").textContent = score;
     //! KETIKA PEMAIN BENAR MENEBAK
   } else if (tebakan === secretNumber && play) {
+    document.getElementById(winner())
+    document.getElementById(loose()).muted
+    document.getElementById(again()).muted
+    a.muted = true
     document.getElementById(
       "pesan"
     ).textContent = `SELAMAT KAMU DAPAT BAMBU RUNCING`;
+    
     document.querySelector("body").style.backgroundColor = "rgba(255, 0, 0.25)";
     document.getElementById("highscore").textContent = score;
     document.getElementById(
@@ -57,7 +63,9 @@ document.querySelector(".tebak").addEventListener("click", function () {
   //! KETIKA SCORE MENJADI 0
   if (score === 0) {
     play = false;
-
+    loose()
+    winner().muted
+    again().muted
     document.getElementById(
       "pesan"
     ).textContent = `SAYANG SEKALI ANDA AKHIRNYA TEWAS!`;
