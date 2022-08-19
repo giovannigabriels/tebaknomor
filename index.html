@@ -12,7 +12,7 @@
     <title>TEBAK ANGKA!</title>
   </head>
 
-  <audio id="lose">
+  <!-- <audio id="lose">
     <source src="musik/kalah.mp3" type="mp3/mpeg">
   </audio>
   <audio id="again">
@@ -37,20 +37,25 @@
   function loose(){
     const lose =  new Audio("musik/kalah.mp3")
     lose.play()
+
   }
-  </script>
-    <div class="data">
+  function login2(){
+    console.log('<<<<<');
+  }
+  </script> -->
+    <!-- <div class="data">
       <div id="style1" class="dataform">
           <h1 id="judul"> Masuk </h1>
             <div id="formnya"> 
               <form>
                 <input id="user" type="text" placeholder="Nama pengguna">
                 <input id="loc" type="text" placeholder="Lokasi"> 
-                <input id="log" type="button" value="Masuk"/>
+                <input onclick="login2()" id="masuk" type="button" value="Masuk"/>
+
               </form>
             </div>
         </div>
-    </div>
+    </div> -->
 
   <body>
     <!-- <audio autoplay><source src="17.mp3" type="audio/mp3" loop = -1 ></audio> -->

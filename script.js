@@ -3,15 +3,18 @@
 let secretNumber = Math.trunc(Math.random() * 25) + 1;
 let score = 10;
 let highScore = 0;
-let user = document.getElementById("user").value;
-let loc = document.getElementById("loc").value;
-// let page1 = document.getElementsByClassName("page1");
-// let page2 = document.getElementsByClassName("page2");
-let play = true;
+let user = "";
+let loc = "";
 
-document.getElementById("login").addEventListener("click", function () {
+let play = true;
+let login = document.getElementById("login");
+
+login.addEventListener("click", function () {
+  user = document.getElementById("user").value;
+  loc = document.getElementById("loc").value;
   document.querySelector(".page1").style.display = "none";
   document.querySelector(".page2").style.display = "block";
+  console.log(user, loc);
 });
 
 document.querySelector(".tebak").addEventListener("click", function () {
@@ -72,7 +75,7 @@ document.querySelector(".tebak").addEventListener("click", function () {
     document.getElementById("highscore").textContent = score;
   }
 });
-console.log(user, loc);
+// console.log(user, loc);
 document.getElementById("reset").addEventListener("click", function () {
   score = 10;
   secretNumber = Math.trunc(Math.random() * 25) + 1;
