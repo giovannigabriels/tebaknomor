@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+.data {
+  display: none;
+}
 
 body {
   background-size: cover;
@@ -130,6 +133,32 @@ label {
   font-weight: bold;
 }
 
+.kalimat {
+  border-radius: 25%;
+  border-color: #cf1020;
+  border-style: double;
+  width: 400px;
+  height: 100px;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(103, 98, 98, 0.9);
+}
+#kalimat {
+  border-radius: 25%;
+  border-color: #cf1020;
+  border-style: double;
+  width: 400px;
+  height: 100px;
+  padding: 25, 25, 25, 25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: rgba(103, 98, 98, 0.9);
+}
 #reset {
   margin-top: 7rem;
 }

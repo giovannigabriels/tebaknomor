@@ -11,6 +11,47 @@
 
     <title>TEBAK ANGKA!</title>
   </head>
+
+  <audio id="lose">
+    <source src="musik/kalah.mp3" type="mp3/mpeg">
+  </audio>
+  <audio id="again">
+    <source src="musik/playagain.mp3" type="mp3/mpeg">
+  </audio>
+  <audio id="win">
+    <source src="musik/win.mp3" type="mp3/mpeg">
+  </audio>
+  <body>  
+  <audio autoplay loop id="backsound">
+    <source src="musik/backsound.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+  function again(){
+    const againP = new Audio("musik/playagain.mp3")
+    againP.play()
+  }
+  function winner(){
+  const win = new Audio("musik/win.mp3")
+  win.play()
+  }
+  function loose(){
+    const lose =  new Audio("musik/kalah.mp3")
+    lose.play()
+  }
+  </script>
+    <div class="data">
+      <div id="style1" class="dataform">
+          <h1 id="judul"> Masuk </h1>
+            <div id="formnya"> 
+              <form>
+                <input id="user" type="text" placeholder="Nama pengguna">
+                <input id="loc" type="text" placeholder="Lokasi"> 
+                <input id="log" type="button" value="Masuk"/>
+              </form>
+            </div>
+        </div>
+    </div>
+
   <body>
     <!-- <audio autoplay><source src="17.mp3" type="audio/mp3" loop = -1 ></audio> -->
     <div class="page1">
@@ -44,14 +85,13 @@
           placeholder="Insert your number"
         />
         <button type="button" id="submit" class="btn tebak">Coba tebak!</button>
-        <button type="button" id="reset" class="btn reset">Tebak lagi</button>
+        <button type="button" onclick="again()" id="reset" class="btn reset">Tebak lagi</button>
 
-        <div>
+        <div class="kalimat">
           <p class="label-score">Score Kamu:<span id="score">10</span></p>
           <p id="pesan">MULAI TEBAK...</p>
-          <p id="label-highscore">
+          <p id="kalimat">
         </div>
-
           Score Tertinggi Kamu: <span id="highscore">0</span>
         </p>
       </form>

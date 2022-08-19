@@ -72,7 +72,7 @@ document.querySelector(".tebak").addEventListener("click", function () {
     document.getElementById("highscore").textContent = score;
   }
 });
-
+console.log(user, loc);
 document.getElementById("reset").addEventListener("click", function () {
   score = 10;
   secretNumber = Math.trunc(Math.random() * 25) + 1;
